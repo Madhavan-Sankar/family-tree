@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  flex-direction: column; /* Ensures vertical layout */
+  min-height: 100vh; /* Ensures body takes full viewport height */
+  margin: 0; /* Removes default margin */
+  padding: 10px 20px 15px 20px;
+}
+
+.family-tree {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none; /* Removes bullet points */
+  }
+  
+  .person {
+    flex: 1 0 200px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .photo-container {
+    width: 150px; /* Adjust according to your needs */
+    height: 150px;
+    border-radius: 50%; /* Set the desired roundness */
+    overflow: hidden; /* Hide any overflowing content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .photo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures image fills the container */
+  }
+  
+  .dropzone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    border: 1px dashed #ccc;
+    cursor: pointer;
+  }
+  
+  .dropzone.over {
+    border: 1px solid #008CBA;
+  }
+  
